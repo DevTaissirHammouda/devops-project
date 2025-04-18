@@ -16,10 +16,10 @@ jobs:
         uses: docker/setup-buildx-action@v1
 
       - name: Build Docker image
-        run: docker build -t angular-app .
+        run: docker build -t devops .
 
       - name: Deploy Docker container
         run: |
-          docker stop angular-app || true
-          docker rm angular-app || true
-          docker run -d -p 8080:80 --name angular-app angular-app
+          docker stop devops || true
+          docker rm devops || true
+          docker run -d -p 8080:80 --name devops devops
